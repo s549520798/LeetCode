@@ -42,6 +42,14 @@ public class LeetCode016 {
     private static int threeSumClosest1(int[] nums, int target){
         if (nums == null || nums.length < 3) return 0;
         Arrays.sort(nums);
+        int mResult = Integer.MAX_VALUE;
+        int i = 0; boolean flag = false;
+        while (flag == false){
+
+
+            if (flag == true) break;
+            i++;
+        }
 
         return 0;
     }
