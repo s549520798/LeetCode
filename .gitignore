@@ -24,3 +24,5 @@
 hs_err_pid*
 
 /LeetCode.iml
+/.idea/
+/out/
