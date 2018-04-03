@@ -11,38 +11,38 @@ import java.util.Arrays;
 public class LeetCode016 {
 
     public static void main(String[] args) {
-        int[] test = new int[]{-1, 2, 1, -4};
-        System.out.println(threeSumClosest(test, 1));
+        int[] test = new int[]{-1, 2, 1, -4,3,2,1,5,7,4};
+        System.out.println(threeSumClosest(test, 100));
     }
 
-    public static int threeSumClosest(int[] nums, int target) {
+    /**
+     *  accepted  but take much time
+     * @param nums 数组
+     * @param target 目标数字
+     * @return 三个数相加之和
+     */
+    private static int threeSumClosest(int[] nums, int target) {
+        if (nums == null || nums.length < 3) return 0;
         Arrays.sort(nums);
         int mResult = 0;
-        int i = 0;
-        while (nums[i] <= target) {
-            int dup = Integer.MAX_VALUE;
-            int temp = 0;
-            int j = i + 1;
-            int k = nums.length - 1;
-            int sum = target - nums[i];
-            while (j < k) {
-                if (nums[j] + nums[k] > sum) {
-                    temp = nums[j] + nums[k] - sum;
-                    k--;
-                } else if (nums[j] + nums[k] < sum) {
-                    temp = sum - nums[j] - nums[k];
-                    j++;
-                }
-                if (dup > temp) {
-                    dup = temp;
-                } else {
-                    mResult = Math.abs(mResult) < Math.abs(nums[i] + nums[j] + nums[k]) ?
-                            mResult : nums[i] + nums[j] + nums[k];
-                    break;
+        int diff = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length - 2; i++) {
+            for (int j = i + 1; j < nums.length - 1 ; j++) {
+                for (int k = j + 1; k < nums.length ; k++) {
+                    if (Math.abs(diff) > Math.abs(nums[i] + nums[j] + nums[k] - target)){
+                        diff = Math.abs(nums[i] + nums[j] + nums[k] - target);
+                        mResult = nums[i] + nums[j] + nums[k];
+                    }
                 }
             }
-            i++;
         }
+        return mResult;
+    }
+
+    private static int threeSumClosest1(int[] nums, int target){
+        if (nums == null || nums.length < 3) return 0;
+        Arrays.sort(nums);
+
         return 0;
     }
 }
