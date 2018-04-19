@@ -1,5 +1,8 @@
 package leetcode21_30;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /**
  * Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
  * Example:
@@ -27,6 +30,7 @@ public class LeetCode023 {
             result = result.next;
         }
     }
+
     /*
     Time Limit Exceeded
      */
@@ -78,10 +82,34 @@ public class LeetCode023 {
 //        }
 //        return mResult.next;
 //    }
-    private static ListNode mergeKLists(ListNode [] lists){
+    private static ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (o1, o2) -> {
+            if (o1.val < o2.val) {
+                return -1;
+            } else if (o1.val == o2.val) {
+                return 0;
+            } else {
+                return 1;
+            }
+        });
+        ListNode head = new ListNode(0);
+        ListNode temp = head;
 
-        return null;
+        for (ListNode node:lists)
+            if (node!=null)
+                queue.add(node);
+
+        while (queue.peek() != null){
+            temp.next = queue.poll();
+            temp = temp.next;
+            if (temp.next != null){
+                queue.add(temp.next);
+            }
+        }
+        return head.next;
     }
+
     private static class ListNode {
         private int val;
         private ListNode next;
