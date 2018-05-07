@@ -1,5 +1,7 @@
 package leetcode1_10;
 
+import common.ListNode;
+
 /**
  * Created by lazylee on 2017/11/26.
  * Question: Add Two Numbers
@@ -61,12 +63,4 @@ public class LeetCode002 {
         return dummyHead.next;
     }
 
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 }

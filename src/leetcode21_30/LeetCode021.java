@@ -1,5 +1,6 @@
 package leetcode21_30;
 
+import common.ListNode;
 import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 /**
@@ -65,14 +66,6 @@ public class LeetCode021 {
         return mResult.next;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 }
 
 

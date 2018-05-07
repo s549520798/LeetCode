@@ -1,5 +1,7 @@
 package leetcode21_30;
 
+import common.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -110,12 +112,4 @@ public class LeetCode023 {
         return head.next;
     }
 
-    private static class ListNode {
-        private int val;
-        private ListNode next;
-
-        public ListNode(int x) {
-            this.val = x;
-        }
-    }
 }

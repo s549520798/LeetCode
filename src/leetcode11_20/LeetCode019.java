@@ -1,6 +1,6 @@
 package leetcode11_20;
 
-import java.util.List;
+import common.ListNode;
 
 /**
  * Given a linked list, remove the Nth node from the end of list and return its head.
@@ -46,13 +46,4 @@ public class LeetCode019 {
         return length;
     }
 
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
 }
