@@ -1,7 +1,7 @@
 package common;
 
 /**
- * common used class
+ * main.java.common used class
  */
 public class ListNode {
     public int val;

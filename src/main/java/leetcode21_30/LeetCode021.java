@@ -1,7 +1,6 @@
 package leetcode21_30;
 
 import common.ListNode;
-import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
 /**
  * Merge two sorted linked lists and return it as a new list.

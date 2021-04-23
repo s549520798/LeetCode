@@ -1,7 +1,6 @@
 package leetcode1_10;
 
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Created by lazylee on 2017/12/5.

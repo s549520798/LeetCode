@@ -2,7 +2,6 @@ package leetcode21_30;
 
 import common.ListNode;
 
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**

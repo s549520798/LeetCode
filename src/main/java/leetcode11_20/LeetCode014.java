@@ -1,7 +1,7 @@
 package leetcode11_20;
 
 /**
- * Write a function to find the longest common prefix string amongst an array of strings.
+ * Write a function to find the longest main.java.common prefix string amongst an array of strings.
  */
 public class LeetCode014 {
     public static void main(String[] args) {

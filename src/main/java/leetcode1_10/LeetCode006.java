@@ -1,7 +1,5 @@
 package leetcode1_10;
 
-import com.sun.org.apache.regexp.internal.RE;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 /**
  * The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:

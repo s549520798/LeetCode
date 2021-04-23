@@ -1,9 +1,5 @@
 package leetcode1_10;
 
-import com.sun.org.apache.xalan.internal.xsltc.runtime.InternalRuntimeError;
-
-import java.util.Arrays;
-
 /***
  * Given a 32-bit signed integer, reverse digits of an integer.
  * eg. 123 -> 321;  -123 -> -321; 120 -> 21
